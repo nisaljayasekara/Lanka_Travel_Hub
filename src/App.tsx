@@ -1,13 +1,19 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import {} from 'react';
+import Header from './components/Header';
+
+import BookingForm from './components/BookingForm';
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return 
-
+  return (
+    <div>
+      <Header />
+      <main>
+        <h1>Welcome to Our Travel Agency</h1>
+        
+        <BookingForm />
+      </main>
+    </div>
+  );
 }
 
-export default App
+export default App;
