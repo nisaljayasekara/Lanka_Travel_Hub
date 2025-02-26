@@ -7,6 +7,7 @@ import anuradapuraImage from '../assets/Anuradhapura.jpg';
 const destinations = [
   { id: 1, name: 'Galle', description: ' The epicentre of Sinhalese civilization dating back to 4th century BC, Anuradhapura was the first historical capital of Sri Lanka' ,
     image : galleImage
+    
   },
 
 

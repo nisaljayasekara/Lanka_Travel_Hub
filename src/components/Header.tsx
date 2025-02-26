@@ -1,4 +1,6 @@
-import {} from 'react';
+// src/components/Header.tsx
+import { Link } from 'react-router-dom';
+import "../App.css"
 
 const Header = () => {
   return (
@@ -6,9 +8,12 @@ const Header = () => {
       <h1>Lanka Travel Hub</h1>
       <nav>
         <ul>
-          <li>Home</li>
-          <li>Destinations</li>
-          <li>Contact</li>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/destinations">Destinations</Link></li>
+          <li><Link to="/contact">Contact</Link></li>
+          <li><Link to="/aboutus">Aboutus</Link></li>
+          <li><Link to="/exprience">Exprience</Link></li>
+          
         </ul>
       </nav>
     </header>

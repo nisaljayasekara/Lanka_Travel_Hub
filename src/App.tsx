@@ -1,18 +1,27 @@
-import {} from 'react';
+// src/App.tsx
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
+import Home from './components/Home';
+import Contact from './components/Contact';
 import DestinationList from './components/DestinationList';
-import BookingForm from './components/BookingForm';
+import Aboutus from "./components/Aboutus";
+import Experience from "./components/Exprience";
 
 function App() {
   return (
-    <div>
+    <Router>
       <Header />
       <main>
-        <h1>Welcome to Our Travel Agency</h1>
-        <DestinationList />
-        <BookingForm />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/destinations" element={<DestinationList />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/aboutus" element={<Aboutus />} />
+          <Route path="/exprience" element={<Experience />} />
+
+        </Routes>
       </main>
-    </div>
+    </Router>
   );
 }
 
