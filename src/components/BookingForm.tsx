@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
+import Header from './Header';
 
+
+<Header />
 const BookingForm = () => {
   const [name, setName] = useState('');
   const [destination, setDestination] = useState('');

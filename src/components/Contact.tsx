@@ -1,7 +1,9 @@
 // src/components/Contact.tsx
 import React from 'react';
 import '../Contact.css';
+import Header from './Header';
 
+<Header />
 const Contact: React.FC = () => {
   return (
     <div className="contact-container">

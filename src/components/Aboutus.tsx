@@ -1,6 +1,8 @@
 import React from 'react';
 import "../aboutUs.css"
+import Header from './Header';
 
+<Header />
 const AboutUs: React.FC = () => {
   return (
     <div className="about-us">
