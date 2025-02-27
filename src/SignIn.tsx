@@ -1,7 +1,7 @@
 // src/components/SignIn.tsx
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import './Auth.css'; // Import CSS for styling
+import './css/Auth.css'; // Import CSS for styling
 
 const SignIn = () => {
   const [formData, setFormData] = useState({
@@ -19,10 +19,12 @@ const SignIn = () => {
     e.preventDefault();
     
     // Retrieve user data from local storage
-    const userData = JSON.parse(localStorage.getItem('userData') || '{}');
+    const username= localStorage.getItem('username');
+    const password = localStorage.getItem('password');
+    
 
     // Validate input data
-    if (formData.username === userData.username && formData.password === userData.password) {
+    if (formData.username === username && formData.password === password) {
       console.log('Sign In Successful');
       // Navigate to the dashboard
       navigate('/Home'); // Change this to your desired dashboard route

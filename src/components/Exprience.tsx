@@ -1,10 +1,13 @@
 // src/components/Experience.tsx
 import React from 'react';
-import '../Exprience.css';
+import '../css/Exprience.css';
+import Header from './Header';
+
 
 
 const Experience = () => {
   return (
+    <><Header />
     <div className="experience-container">
       <h2>Our Travel Experiences</h2>
       <p>
@@ -19,6 +22,7 @@ const Experience = () => {
         <li>Adventure Activities like Hiking and Snorkeling</li>
       </ul>
     </div>
+    </>
   );
 };
 

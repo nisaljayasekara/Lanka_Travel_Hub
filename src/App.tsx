@@ -18,7 +18,7 @@ function App() {
         <Route path="/signup" element={<SignUp />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/" element={<Navigate to="/signup" replace />} /> {/* Redirect to Sign Up */}
-          <Route path="/" element={<Home />} />
+          <Route path="/Home" element={<Home />} />
           <Route path="/destinations" element={<DestinationList />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/aboutus" element={<Aboutus />} />

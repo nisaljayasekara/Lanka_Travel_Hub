@@ -1,9 +1,10 @@
-// src/components/SignUp.tsx
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import './Auth.css'; // Import CSS for styling
+import { Link, useNavigate } from 'react-router-dom';
+//import { signUpUser } from '../api/api'; // Adjust the path as necessary
+import './css/Auth.css'; // Import CSS for styling
 
 const SignUp = () => {
+    const navigate = useNavigate()
   const [formData, setFormData] = useState({
     username: '',
     email: '',
@@ -14,12 +15,23 @@ const SignUp = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Save sign-up data to local storage
-    localStorage.setItem('userData', JSON.stringify(formData));
-    console.log('Sign Up Data:', formData);
-    // Optionally, you can redirect the user after sign up
+    console.log('Form submitted');
+    
+    try {
+        localStorage.setItem("username", formData.username)
+        localStorage.setItem("email", formData.email)
+        localStorage.setItem("password",formData.password)
+
+        navigate("/signin")
+      console.log('Sign Up Successful:');
+     
+
+    } catch (error) {
+      console.error('Sign Up Error:', error);
+     
+    }
   };
 
   return (

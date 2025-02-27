@@ -1,12 +1,15 @@
 // src/components/Contact.tsx
 import React from 'react';
-import '../Contact.css';
+import '../css/Contact.css';
 import Header from './Header';
 
-<Header />
+
 const Contact: React.FC = () => {
   return (
+    <>
+    <Header />
     <div className="contact-container">
+      
       <h1>Contact Us</h1>
       <form className="contact-form">
         <div className="form-group">
@@ -24,6 +27,7 @@ const Contact: React.FC = () => {
         <button type="submit" className="submit-btn">Send</button>
       </form>
     </div>
+    </>
   );
 };
 

@@ -1,14 +1,13 @@
 import {} from 'react';
 import Header from './Header';
-
-<Header />
-
+import "../css/destination.css"
 import galleImage from '../assets/Galle.jpg';
 import allaImage from '../assets/alla.jpg';
 import anuradapuraImage from '../assets/Anuradhapura.jpg';
 import yalaImage from '../assets/yala.jpg'
 import nuwaraImage from '../assets/Nuwara-Eliya.jpg'
 import GalleImage from '../assets/Galle.jpg'
+
 
 const destinations = [
   { id: 1, name: 'Galle', description: ' The epicentre of Sinhalese civilization dating back to 4th century BC, Anuradhapura was the first historical capital of Sri Lanka' ,
@@ -46,6 +45,7 @@ const destinations = [
 const DestinationList = () => {
   return (
     <section>
+      <Header />
       <h2>Popular Destinations</h2>
       <ul>
         {destinations.map(destination => (
@@ -57,6 +57,7 @@ const DestinationList = () => {
         ))}
       </ul>
     </section>
+    
   );
 };
 
